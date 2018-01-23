@@ -1,0 +1,71 @@
+<div  class="container">
+	<div class="row">
+		<div class="top-menu">
+			<div class="col-md-4 col-md-push-4 col-xs-12">
+				
+				<div class="input-group custom-search-form">
+					<input type="text" ng-model="tickets.title" class="form-control mysearch" placeholder="Search...">
+					<span class="input-group-btn">
+						<button class="btn mysearch" type="button">
+							<span class="glyphicon glyphicon-search"></span>
+						</button>
+					</span>
+				</div><!-- /input-group -->
+
+
+			</div>
+
+			<button ng-if="admin === false" class="col-md-4 col-md-pull-4 col-xs-6 btn mybtn1">My Questions</button>
+			<button ng-if="admin === true" ng-click="dashCtrl.clearFilter()" class="col-md-4 col-md-pull-4 col-xs-6 btn mybtn1">All Tickets</button>
+			
+
+			<a href="/addTicket"><button ng-if="admin === false" class="col-md-4 col-xs-6 btn mybtn">+Ask Question</button></a>
+
+		</div>
+
+	</div>
+	<div class="dropdown pull-right">
+		<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+			Filter By
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+			<li><a ng-click="dashCtrl.openTickets()" >Open</a></li>
+			<li><a ng-click="dashCtrl.closeTickets()" >Close</a></li>
+		</ul>
+	</div>
+	<div class="no-ticket" ng-if="dashCtrl.ticketLength == 0">
+		<h2>No Tickets Raised!</h2>
+	</div>
+	<div ng-if="dashCtrl.ticketLength == 1" class="ticket well well-lg clearfix tickets" >
+		<div class="row">
+			<div class="col-xs-12">
+				<div  ng-repeat="ticket in dashCtrl.filteredTickets | filter:tickets">
+					<div class="ticket-no">
+						<h4>Ticket No:<span>{{ticket.ticketid}}</span></h4>
+					</div>
+					<div class="ticket-title">
+						<a ng-href="/ticketView/{{ticket.ticketid}}"><h3>{{ticket.title}}</h3></a>
+					</div>
+					<div class="ticket-info">
+						<p class="pull-left">{{ticket.username}} On {{ticket.created | date:"MMM d, y h:mm a"}}</p>
+						<p class="pull-right">Status:<span>{{ticket.status}}</span></p>
+
+					</div>
+					<hr class="hr">
+			
+				</div>
+				<div ng-show="(dashCtrl.filteredTickets | filter:tickets).length == 0">
+					<h2>No Tickets Found (:</h2>
+				</div>
+
+			
+				
+			</div>
+
+		</div>
+
+	</div>
+	
+	
+</div>

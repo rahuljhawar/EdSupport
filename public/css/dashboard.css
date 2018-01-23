@@ -1,0 +1,153 @@
+.top-menu{
+
+	margin-top: 10px !important;
+}
+.mybtn{
+	background-color: transparent;
+	border: 1px solid #fff !important;
+	color: #fff;
+	font-size: 16px !important;
+	font-weight: bold !important;
+}
+.mybtn1{
+	background-color: #fff;
+	color: #2b2d42;
+	border: 1px solid #fff !important;
+	font-size: 16px !important;
+	font-weight: bold !important;
+}
+.mysearch{
+	background-color: transparent;
+	border: 1px solid #fff !important;
+
+}
+
+.glyphicon-search{
+	color: #fff;
+}
+.mybtn:hover{
+	color: #fff !important;
+}
+.mybtn1:hover{
+	color: #2b2d42 !important;
+}
+.tickets{
+	margin-top: 90px !important;
+}
+.well-lg{
+	width: 100% !important;
+	border-radius: 0px !important;
+}
+.well{
+	background-color: #dfdfdf !important;
+-webkit-box-shadow: -3px -1px 5px 0px rgba(204,190,204,1) !important;
+-moz-box-shadow: -3px -1px 5px 0px rgba(204,190,204,1);
+box-shadow: -3px -1px 5px 0px rgba(204,190,204,1);
+}
+.hr{
+	margin-top: 50px !important;
+}
+.ticket-no span{
+	color: #b21015;
+}
+.ticket-title h3{
+	font-family: "Brandon Grotesque";
+	font-weight: bold !important;
+}
+
+.ticket-title a{
+	text-decoration: none !important;
+
+}
+.ticket-info{
+	padding-bottom: 1px !important;
+}
+.ticket-info p{
+	font-family: "Brandon Grotesque" ;
+	font-size: 16px ;
+	color: #424242;
+
+}
+.ticket-info span{
+	text-transform: capitalize;
+	color: #b21015;
+}
+.no-ticket{
+	color: #fff;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+	background-color:transparent !important;
+	color: #fff !important;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+   
+}
+
+.username {
+	color: #fff !important;
+	display: table;
+	margin-top: -25px;
+	}
+.logout{
+	background-color: #b21015 !important;
+	margin-top: 5px !important;
+	font-size: 16px !important;
+}
+.logout a:hover{
+	text-decoration: none !important;
+
+}
+.dropdown{
+	position: absolute;
+	top:25px;
+}
+.add-ticket label{
+	color: #fff;
+}
+.add-ticket input{
+	background-color: transparent;
+	color: #fff;
+	
+}
+.add-ticket textarea{
+	background-color: transparent;
+	color: #fff;
+
+}
+.page-header h2{
+	color: #fff;
+}
+
+#loading-bar {
+pointer-events: all;
+z-index: 99999;
+border: none;
+margin: 0px;
+padding: 0px;
+width: 100%;
+height: 100%;
+top: 0px;
+left: 0px;
+cursor: wait;
+position: fixed;
+background-color: rgba(0, 0, 0, 0.6);
+}
+ @media screen and (max-width:767px){
+	#dashboard{
+		display: none !important;
+	}
+	.username{
+		position: absolute;
+		top:10px;
+	}
+	.logout{
+		margin-top:58px !important;
+	}
+	.ng-scope .open a{
+		margin-right: -170px !important;
+	}
+	.add-ticket{
+		width: 90vw !important;
+	}
+}  

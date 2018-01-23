@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="EdSupport">
+<head>
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EdSupport</title>
+  <link rel="stylesheet"  href="css/styles.css">
+  <link rel="stylesheet"  href="css/signup.css">
+  <link rel="stylesheet"  href="css/loading-bar.min.css">
+  <link rel="stylesheet"  href="css/dashboard.css">
+  <link rel="stylesheet"  href="css/ticketview.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body >
+
+ <div ng-controller="dashController as dashCtrl" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+         <a class="navbar-brand navbar-brand-centered" href="/"><span>Ed</span>Support</a>
+      </div>
+      <ul  ng-if="dashCtrl.loggedIn()==0" class="nav navbar-nav navbar-right">
+        <li ><a href="/login">Login</a></li>
+        <li ><a id="signup" href="/signup">Sign Up</a></li>
+      </ul>
+      
+      <ul  ng-if="dashCtrl.loggedIn()==1" class="nav navbar-nav navbar-right">
+        <li ><a id="dashboard" href="/dashboard"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Dashboard</a></li>
+        <li class="dropdown username">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-circle-o" aria-hidden="true"></i> {{name}}  <b class="caret"></b></a>
+          <ul class="logout dropdown-menu">
+            <a><li ng-click="dashCtrl.logout()" >Log Out</li></a>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div> 
+
+ 
+
+  <section class="main">
+    <div class="container">
+      <div ng-view></div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <center>&copy; 2018 EdSupport</center>
+    <center>
+      <span><i class="fa fa-facebook" aria-hidden="true"></i></span>
+      <span><i class="fa fa-github-alt" aria-hidden="true"></i></span></center>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="./js/angular-animate.min.js"></script>
+    <script src="./js/loading-bar.min.js"></script>
+    <script src="./js/angular-route.js"></script>
+    <script src="angular/app.js"></script>
+    <script src="./angular/routes.js"></script>
+  
+
+    <!-- Services -->
+    <script src="angular/services/queryService.js"></script>
+    <script src="angular/services/authService.js"></script>
+    <!--   Controllers -->
+    <script src="angular/controllers/userController.js"></script>
+    <script src="angular/controllers/addTicketController.js"></script>
+    <script src="angular/controllers/dashController.js"></script>
+    <script src="angular/controllers/viewTicketController.js"></script>
+
+
+
+  </body>
+
+  </html>
+

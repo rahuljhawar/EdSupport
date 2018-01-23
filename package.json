@@ -1,0 +1,26 @@
+{
+  "name": "edsupport",
+  "version": "1.0.0",
+  "description": "A 24*7 support system for users.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rahul Jhawar",
+  "license": "ISC",
+  "dependencies": {
+    "angular-loaders": "^1.0.0",
+    "bcrypt": "^1.0.3",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "express-sessions": "^1.0.6",
+    "jsonwebtoken": "^8.1.0",
+    "mongoose": "^4.13.9",
+    "nodemailer": "^4.4.1",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-google": "^0.3.0",
+    "random-number": "0.0.9",
+    "randomstring": "^1.1.5"
+  }
+}

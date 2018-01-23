@@ -1,0 +1,51 @@
+<form ng-submit="userCtrl.loginUser()" >
+	<div class="container-fluid">
+		<div class="row">
+			<div class="well center-block">
+				<div class="well-header">
+					<p class="text-center text-info" style="font-weight: bold;font-size:18px; ">{{userCtrl.notify}}</p>
+					<h3 class="text-center text-success"> Login Here! </h3>
+					<hr>
+				</div>
+
+				
+				<div class="row">
+					<div class="col-md-12 col-xs-12 col-sm-12">
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-addon">
+									<i class="glyphicon glyphicon-envelope"></i>
+								</div>
+								<input type="email" class="form-control" ng-model="userCtrl.email" name="email" placeholder="E-Mail" required>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-addon">
+									<i class="glyphicon glyphicon-lock"></i>
+								</div>
+								<input type="password"  placeholder="Password" ng-model="userCtrl.password" name="password" class="form-control" required>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="row widget">
+					<div class="col-md-12 col-xs-12 col-sm-12">
+						<button class="btn btn-warning btn-block"> Login </button>
+						<a href="/forgotpassword" id="forgot-pass">Forgot Password?</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</form>

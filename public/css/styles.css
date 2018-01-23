@@ -1,0 +1,109 @@
+
+.navbar {
+    background:-webkit-gradient(linear, left top, right bottom, color-stop(0%, #eb503e), color-stop(47%, #bf1f1f), color-stop(100%, #a4000b));
+    border: 0 !important;
+    border-radius: 0;
+    height: 80px !important;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+    display: flex;
+    align-items: center;
+    font-family:  'Roboto', sans-serif;
+    font-size: 18px !important;
+    font-weight: bold;
+}
+.navbar-nav li{
+    margin-left: 20px !important;
+}
+.navbar li a, .navbar  {
+    color: #fff !important;
+}
+.navbar-brand span{
+    color: #2b2d42 ;
+
+}
+.navbar-brand{
+    color: #fff !important;
+   
+     font-family: Ubuntu, sans-serif !important;
+    font-size: 32px !important;
+}
+.navbar-nav li a:hover{
+    color: #2b2d42 !important;
+}
+    
+
+#signup{
+    border: 1.2px solid #fff;
+}
+#signup:hover{
+    background-color: #2b2d42 !important;
+    color: #fff !important;
+}
+.main{
+    background-color: #2b2d42;
+    margin-top:80px;
+    display: flex;
+    min-height: 550px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.desc{
+ 
+    color: #fff;
+    display: block;
+    margin: 180px 0px 180px 0px;
+   }
+   .desc h1{
+        font-size: 5vmax;
+   }
+   .desc p{
+        color: #fff;
+        font-weight:bold;
+        font-size: 16px;
+        padding-bottom: 10px !important;
+   }
+.desc a{
+
+    text-decoration: none !important;
+    color: #fff;
+    border: 1px solid #fff !important;
+    padding: 10px 30px 10px 30px !important;
+    border-radius: 0px 0px 0px 0px !important;
+}
+
+.fa{
+    font-size: 22px !important;
+    margin-right: 10px;
+    margin-top:10px;
+    margin-bottom: 5px;
+}
+.footer{
+   background:-webkit-gradient(linear, left top, right bottom, color-stop(0%, #eb503e), color-stop(47%, #bf1f1f), color-stop(100%, #a4000b));
+   padding:10px 0px 10px 0px;
+   
+}
+
+/**********MEDIA QUERIES *********/
+@media screen and (max-width: 780px){
+     .navbar-brand{
+       position: absolute;
+       left:10px;
+       top:15px;
+    }
+    .navbar-nav li{
+      display: inline-flex !important;
+
+   }
+   .navbar-nav{
+      position: absolute !important;
+      right: 50px;
+      top:15px;
+   }
+}
+     
+
+

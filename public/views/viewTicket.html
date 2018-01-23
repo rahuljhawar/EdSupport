@@ -1,0 +1,63 @@
+     
+<div class="ticket-info">
+ <div class="row">
+  <div class="col-md-9 col-xs-12">
+    <h4>Title ID:</h4>
+    <h5 >{{viewCtrl.ticketInfo.ticketid}}</h5>
+  </div>
+  <div class="col-md-3 col-xs-12">
+    <h4 >Posted By <em>{{viewCtrl.ticketInfo.username}}</em> on</h4>
+    <span id="time">{{viewCtrl.ticketInfo.created | date:"MMM d, y h:mm a"}}</span>
+  </div>
+</div>
+  <br>
+  <div class="row">
+    <div class="col-md-9 col-xs-12">
+      <h4>Title :</h4>
+      <h5 >{{viewCtrl.ticketInfo.title}}</h5>
+      <br>
+      <h4>Description :</h4>
+      <h5 >{{viewCtrl.ticketInfo.description}}</h5>
+      <br>
+    </div>
+    <div class="col-md-3 col-xs-12">
+        <button class="btn btn-md btn-warning" ng-click="viewCtrl.changeStatus()">Close Discussion</button>
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="row">
+    <div class="col-xs-12"> 
+      <div class="panel panel-warning">
+        <div class="panel-heading"><h3 class="panel-title"><b> Chat Here &#8681; </b></h3>
+        </div>
+        <div class="panel-body" style="background:url('http://subtlepatterns.com/patterns/geometry2.png');height: 300px; }">
+          <div ng-repeat="msg in viewCtrl.ticketInfo.messages">
+          <div ng-if="msg.sender === 'Admin'" class="clearfix"><p class="me pull-left">{{msg.message}}<small><b>-{{msg.sender}}</b> {{msg.created | date:"MMM d, y h:mm a"}}</small></p></div>
+           <div ng-if="msg.sender != 'Admin'" class="clearfix"><p class="me pull-right">{{msg.message}}<small><b>-{{msg.sender}}</b> {{msg.created | date:"MMM d, y h:mm a"}}</small></p></div>
+         </div>
+        </div>
+        <div class="panel-footer">
+          <div class="input-group">
+            <input id="btn-input" autocomplete="off" type="text" ng-model="viewCtrl.msg" class="form-control input-sm" placeholder="Type your message here..." />
+            <span class="input-group-btn">
+              <button ng-click="admin ? viewCtrl.postAdminMsg() : viewCtrl.postUserMsg()" class="btn btn-warning btn-sm" id="btn-chat">
+              Send</button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+   $('#btn-input').keypress(function (e) {
+    var key = e.which;
+       if(key == 13)  // the enter key code
+       {
+        $('#btn-chat').click();
+        return false;  
+      }
+    });
+  </script>
